@@ -1,7 +1,7 @@
 #' @name example3
-#' @title Missouri Mourning Dove Nest Survival Data - Interval Format
-#' @description The Missouri dickcissel dataset collected by Suedkamp Wells(2005)
-#' is analyzed via BEANSP for illustration. For more detailed analysis,see Cao et.al(2009).
+#' @title National Mourning Dove Nest Survival Data - Interval Format
+#' @description The original data were collected by Geissler et al.(1987). This
+#' example dataset only contains a fragment of whold dataset.
 #' @format A data frame with 217 observations on the following 6 variables.:
 #'   \describe{
 #'     \item{\code{id}}{Nest id}

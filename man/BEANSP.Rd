@@ -6,19 +6,30 @@
 \alias{BEANSP-package}
 \title{BEANSP: A package for computating the notorious bar statistic.}
 \description{
-Package mBEANSP computes age specific nest survival rates based on a Bayesian
+Package BEANSP computes age specific nest survival rates based on a Bayesian
 hierarchical model.
 }
 \details{
-The package mBEANSP can be applied on either one of the two simple data
-formats, interval format and date format. For more details of data format,
-see example 1 and example 2 instruction. For either data format, first use
+The package BEANSP can be applied on the case where either nest fate is
+known or unknown. The datasets \code{example1} and \code{example2} contains missouri
+dickcissel nest survival data, where the nest fate is known, and the datasets
+\code{exmaple3} and \code{exmaple4} contains national mourning dove nest survival data,
+where some nest fates are unknown.
+
+The package can be also applied on either one of the two simple data formats,
+interval format and date format. For either data format, first use
 the function "nestconv" to convert a data to the standard format including
-(ul,ur,zl,zr,y); then apply the function "nestsr" to generate the nest
-survival summary.
+\code{(zl,zr,y)} (for the uncensored data, the return also contains \code{(ul, ur)});
+then apply the function "nestsr" to generate the nest survival summary.
 }
 \references{
 Cao, J., He, C., Suedkamp Wells, K.M., Millspaugh, J.J., and
-Ryan, M.R. (2009).  Modeling age and nest-specific survival using a
-hierarchical Bayesian approach. Biometrics, 65, 1052-1062.
+Ryan, M.R. (2009).  Modeling age and nest-specific survival using a hierarchical
+Bayesian approach. Biometrics, 65, 1052-1062.
+}
+\seealso{
+\code{\link{nestsr}}, \code{\link{nestconv}}
+}
+\author{
+Chong He, Yiqun Yang, Jing Cao, Peng Shao
 }

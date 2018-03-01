@@ -5,6 +5,12 @@
 #' @return b
 #' @useDynLib BEANSP, .registration = TRUE
 #' @importFrom stats var
+#' @author
+#' Chong He, Yiqun Yang, Jing Cao, Peng Shao
+#' @keywords methods
+#' @references Cao, J., He, C., Suedkamp Wells, K.M., Millspaugh, J.J., and
+#' Ryan, M.R. (2009).  Modeling age and nest-specific survival using a hierarchical
+#' Bayesian approach. Biometrics, 65, 1052-1062.
 #' @export
 
 

@@ -1,6 +1,7 @@
 #' @name example4
-#' @title Missouri Mourning Dove Nest Survival Data - Date Format
-#' @description ..
+#' @title National Dove Nest Survival Data - Date Format
+#' @description The original data were collected by Geissler et al.(1987). This
+#' example dataset only contains a fragment of whold dataset.
 #' @format A data frame with 217 observations on the following 7 variables.:
 #'   \describe{
 #'     \item{\code{id}}{Nest Id.}
