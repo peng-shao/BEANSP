@@ -2,20 +2,26 @@
 % Please edit documentation in R/nestconv.R
 \name{nestconv}
 \alias{nestconv}
-\title{A test}
+\title{Data Format Conversion}
 \usage{
 nestconv(type, nn, jj, data, censored = TRUE)
 }
 \arguments{
-\item{x}{this is a number}
+\item{type}{If data are interval format, type=0; if data are date format, type=1.}
+
+\item{nn}{The number of observed nests (sample size).}
+
+\item{jj}{The number of time units(days) a nest is required to survive to be considered successful.}
+
+\item{data}{Input data.}
+
+\item{censored}{If data are censored, censored=TRUE; if data are not censored, censored=FALSE}
 }
 \value{
-a
-
-b
+The returned values are \code{zl,zr}. If censored=FALSE, \code{ul,ur} are also returned.
 }
 \description{
-a test function.
+Convert date format data or interval format data to the standard format.
 }
 \references{
 Cao, J., He, C., Suedkamp Wells, K.M., Millspaugh, J.J., and

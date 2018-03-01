@@ -1,10 +1,11 @@
-#' @title A test
-#' @description a test function.
-#' @param x this is a number
-#' @return a
-#' @return b
-#' @useDynLib BEANSP, .registration = TRUE
-#' @importFrom stats var
+#' @title Data Format Conversion
+#' @description Convert date format data or interval format data to the standard format.
+#' @param type If data are interval format, type=0; if data are date format, type=1.
+#' @param nn The number of observed nests (sample size).
+#' @param jj The number of time units(days) a nest is required to survive to be considered successful.
+#' @param data Input data.
+#' @param censored If data are censored, censored=TRUE; if data are not censored, censored=FALSE
+#' @return The returned values are \code{zl,zr}. If censored=FALSE, \code{ul,ur} are also returned.
 #' @author
 #' Chong He, Yiqun Yang, Jing Cao, Peng Shao
 #' @keywords methods
