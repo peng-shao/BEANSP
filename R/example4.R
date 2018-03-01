@@ -1,9 +1,6 @@
-#' example4
-#'
+#' @name example4
 #' @title Missouri Mourning Dove Nest Survival Data - Date Format
-#'
 #' @description ..
-#'
 #' @format A data frame with 217 observations on the following 7 variables.:
 #'   \describe{
 #'     \item{\code{id}}{Nest Id.}
@@ -15,7 +12,6 @@
 #'     if 0, the nest fate is not missing}
 #'     \item{\code{x1}}{the first nest-specific covariate.}
 #'   }
-#'
 #' @docType data
 #' @references blank
 #' @keywords datasets

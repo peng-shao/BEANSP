@@ -1,10 +1,7 @@
-#' example1
-#'
+#' @name example1
 #' @title Missouri Dickcissel Nest Survival Data - Interval Format
-#'
 #' @description The Missouri dickcissel dataset collected by Suedkamp Wells(2005)
 #' is analyzed via BEANSP for illustration. For more detailed analysis, see Cao et.al(2009).
-#'
 #' @format A data frame with 217 observations on the following 8 variables.:
 #'   \describe{
 #'     \item{\code{id}}{Nest id}
@@ -21,11 +18,8 @@
 #'     \item{\code{cov1}}{The first nest-specific covariate.}
 #'     \item{\code{cov2}}{The second nest-specific covariate.}
 #'   }
-#'
 #' @docType data
-#'
 #' @keywords datasets
-#'
 #' @references Cao, J., He, C., Suedkamp Wells, K.M., Millspaugh, J.J.,
 #' and Ryan, M.R. (2009).  Modeling age and nest-specific survival using a
 #' hierarchical Bayesian approach. Biometrics, 65, 1052-1062.
