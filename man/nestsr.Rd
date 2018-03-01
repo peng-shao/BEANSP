@@ -2,7 +2,7 @@
 % Please edit documentation in R/nestsr.R
 \name{nestsr}
 \alias{nestsr}
-\title{Nest Survival Rate Esitmate}
+\title{Nest Survival Rate Estimate}
 \usage{
 nestsr(jj, nx, nn, zl, zr, x, y, a, b, sigma, day, enc, covar, n0, ntotal,
   mi = FALSE, tha = FALSE, mutha = FALSE, vartha = FALSE, ul = FALSE,
@@ -39,17 +39,23 @@ nestsr(jj, nx, nn, zl, zr, x, y, a, b, sigma, day, enc, covar, n0, ntotal,
 
 \item{ntotal}{The number of total Gibbs cycles.}
 
-\item{mi}{The indicator of missing(censored) nest fate.}
+\item{mi}{The indicator of missing(censored) nest fate. If fate is not missing,
+the default value is FALSE}
 
-\item{tha}{The missing probability coefficients.}
+\item{tha}{The missing probability coefficients. If fate is not missing,
+the default value is FALSE}
 
-\item{mutha}{The mean number of missing probability coefficients.}
+\item{mutha}{The mean number of missing probability coefficients. If fate is not missing,
+the default value is FALSE}
 
-\item{vartha}{The variance number of missing probability coefficients.}
+\item{vartha}{The variance number of missing probability coefficients. If fate is not missing,
+the default value is FALSE}
 
-\item{ul}{The youngest possible age that the nest could have been when first encounterd.}
+\item{ul}{The youngest possible age that the nest could have been when first encounterd.
+If fate is missing, the default value is FALSE.}
 
-\item{ur}{The oldest possible age that the nest could have been when first encounterd.}
+\item{ur}{The oldest possible age that the nest could have been when first encounterd.
+If fate is missing, the default value is FALSE.}
 }
 \value{
 An object of class "nsr" containing the following components:
@@ -120,9 +126,9 @@ sampling cycles.
  day <- as.double(rep(0.0,jj))
  enc <- as.double(rep(0.0,jj - 1))
  covar <- as.double(rep(0.0,nx))
- out <- nestsr(jj = jj, nx = nx,nn = nn,zl = zl,zr = zr,x = x,y = y,a = a,b = b,
-               sigma = sigma,day = day,enc = enc,covar = covar,n0 = n0,ntotal = ntotal,
-               ul = ul, ur = ur)
+ out <- nestsr(jj = jj, nx = nx, nn = nn, zl = zl, zr = zr, x = x, y = y,
+               a = a, b = b, sigma = sigma, day = day, enc = enc, covar = covar,
+               n0 = n0, ntotal = ntotal, ul = ul, ur = ur)
 
  data("example4")
  jj <- as.integer(26)
@@ -141,11 +147,17 @@ sampling cycles.
  tha <- as.double(rep(0.0,2))
  mutha <- as.double(rep(0.0,2))
  vartha <- as.double(rep(5.0,2))
- out <- nestsr(jj = jj,nx = nx,nn = nn,zl = zl,zr = zr,x = x,y = y,a = a,b = b,
-               sigma = sigma, day = day,enc = enc,covar = covar,n0 = n0,ntotal = ntotal,
-               mi = mi, tha = tha, mutha = mutha, vartha = vartha)
+ out <- nestsr(jj = jj, nx = nx, nn = nn, zl = zl, zr = zr, x = x, y = y, a = a,
+               b = b, sigma = sigma, day = day, enc = enc, covar = covar, n0 = n0,
+               ntotal = ntotal, mi = mi, tha = tha, mutha = mutha, vartha = vartha)
 
+}
+\references{
+Cao, J., He, C., Suedkamp Wells, K.M., Millspaugh, J.J., and
+Ryan, M.R. (2009).  Modeling age and nest-specific survival using a hierarchical
+Bayesian approach. Biometrics, 65, 1052-1062.
 }
 \author{
 Chong He, Yiqun Yang, Jing Cao, Peng Shao
 }
+\keyword{methods}

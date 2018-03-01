@@ -1,4 +1,4 @@
-#' @title Nest Survival Rate Esitmate
+#' @title Nest Survival Rate Estimate
 #' @description This function can handle nests with unknown nest age, nest-specific
 #' covariates(both discrete and continues covariates), and any hazard rate function(or
 #' equivelently survival rate function) as long as it is a smooth function.
@@ -17,12 +17,18 @@
 #' @param covar The initial values for the coefficients for covariates.
 #' @param n0 The number of burn-in cycles.
 #' @param ntotal The number of total Gibbs cycles.
-#' @param mi The indicator of missing(censored) nest fate.
-#' @param tha The missing probability coefficients.
-#' @param mutha The mean number of missing probability coefficients.
-#' @param vartha The variance number of missing probability coefficients.
+#' @param mi The indicator of missing(censored) nest fate. If fate is not missing,
+#' the default value is FALSE
+#' @param tha The missing probability coefficients. If fate is not missing,
+#' the default value is FALSE
+#' @param mutha The mean number of missing probability coefficients. If fate is not missing,
+#' the default value is FALSE
+#' @param vartha The variance number of missing probability coefficients. If fate is not missing,
+#' the default value is FALSE
 #' @param ul The youngest possible age that the nest could have been when first encounterd.
+#' If fate is missing, the default value is FALSE.
 #' @param ur The oldest possible age that the nest could have been when first encounterd.
+#' If fate is missing, the default value is FALSE.
 #' @details The Bayesian estimate of parameter is computed from its posterior
 #' distribution which is simulated by Gibbs sampler. Users need to specify a set
 #' of initial values ,the number of burn-in cycles and the total number of Gibbs
@@ -62,6 +68,10 @@
 #' @importFrom stats var
 #' @author
 #' Chong He, Yiqun Yang, Jing Cao, Peng Shao
+#' @keywords methods
+#' @references Cao, J., He, C., Suedkamp Wells, K.M., Millspaugh, J.J., and
+#' Ryan, M.R. (2009).  Modeling age and nest-specific survival using a hierarchical
+#' Bayesian approach. Biometrics, 65, 1052-1062.
 #' @export
 #' @examples
 #'
@@ -88,9 +98,9 @@
 #'  day <- as.double(rep(0.0,jj))
 #'  enc <- as.double(rep(0.0,jj - 1))
 #'  covar <- as.double(rep(0.0,nx))
-#'  out <- nestsr(jj = jj, nx = nx,nn = nn,zl = zl,zr = zr,x = x,y = y,a = a,b = b,
-#'                sigma = sigma,day = day,enc = enc,covar = covar,n0 = n0,ntotal = ntotal,
-#'                ul = ul, ur = ur)
+#'  out <- nestsr(jj = jj, nx = nx, nn = nn, zl = zl, zr = zr, x = x, y = y,
+#'                a = a, b = b, sigma = sigma, day = day, enc = enc, covar = covar,
+#'                n0 = n0, ntotal = ntotal, ul = ul, ur = ur)
 #'
 #'  data("example4")
 #'  jj <- as.integer(26)
@@ -109,9 +119,9 @@
 #'  tha <- as.double(rep(0.0,2))
 #'  mutha <- as.double(rep(0.0,2))
 #'  vartha <- as.double(rep(5.0,2))
-#'  out <- nestsr(jj = jj,nx = nx,nn = nn,zl = zl,zr = zr,x = x,y = y,a = a,b = b,
-#'                sigma = sigma, day = day,enc = enc,covar = covar,n0 = n0,ntotal = ntotal,
-#'                mi = mi, tha = tha, mutha = mutha, vartha = vartha)
+#'  out <- nestsr(jj = jj, nx = nx, nn = nn, zl = zl, zr = zr, x = x, y = y, a = a,
+#'                b = b, sigma = sigma, day = day, enc = enc, covar = covar, n0 = n0,
+#'                ntotal = ntotal, mi = mi, tha = tha, mutha = mutha, vartha = vartha)
 #'
 
 nestsr <-  function(jj,nx,nn,zl,zr,x,y,a,b,sigma,day,enc,covar,n0,ntotal,
