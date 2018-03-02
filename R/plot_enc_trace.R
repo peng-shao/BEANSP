@@ -2,12 +2,12 @@
 #' @description Displays a plot of sampled values for the age effect of encounter
 #' rate vs. iterations.
 #' @param x a \code{nsr} object
-#' @param j The j-th age effect.j=1,2,...,jj-1
-#' @param n0 The number of burn-in cycles.
-#' @param ntotal The number of total Gibbs cycles.
-#' @param ... Arguments to be passed to methods.
+#' @param j the j-th age effect.j=1,2,...,jj-1
+#' @param n0 the number of burn-in cycles.
+#' @param ntotal the number of total Gibbs cycles.
 #' @param xlab label of \code{x}-axis
 #' @param ylab label of \code{y}-axis
+#' @param ... arguments to be passed to methods.
 #' @importFrom graphics plot
 #' @author
 #' Chong He, Yiqun Yang, Jing Cao, Peng Shao

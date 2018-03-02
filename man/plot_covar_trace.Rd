@@ -10,21 +10,51 @@ plot_covar_trace(x, j, n0, ntotal, xlab = "iter",
 \arguments{
 \item{x}{a \code{nsr} object}
 
-\item{j}{The j-th covariate effect.j=1,2,...,jj-1}
+\item{j}{the j-th covariate effect.j=1,2,...,jj-1}
 
-\item{n0}{The number of burn-in cycles.}
+\item{n0}{the number of burn-in cycles.}
 
-\item{ntotal}{The number of total Gibbs cycles.}
+\item{ntotal}{the number of total Gibbs cycles.}
 
 \item{xlab}{label of \code{x}-axis}
 
 \item{ylab}{label of \code{y}-axis}
 
-\item{...}{Arguments to be passed to methods.}
+\item{...}{arguments to be passed to methods.}
 }
 \description{
 Displays a plot of sampled values for the covariate effect
 vs. iterations.
+}
+\examples{
+
+ n0 <- as.integer(10)
+ ntotal <- as.integer(110)
+ a <- as.double(rep(2.0,2))
+ b <- as.double(rep(1.0,2))
+ sigma <- as.double(rep(1.0,2))
+
+ data("example1")
+ jj <- as.integer(19)
+ nx <- as.integer(2)
+ nn <- as.integer(217)
+ x1 <- example1[1:nn,7]
+ x2 <- example1[1:nn,8]
+ x <- cbind(as.double(x1),as.double(x2))
+ temp <- nestconv(0,nn,jj,example1, censored  =  FALSE)
+ ul <- as.integer(temp[,2])
+ ur <- as.integer(temp[,3])
+ zl <- as.integer(temp[,4])
+ zr <- as.integer(temp[,5])
+ y <- as.integer(temp[,6])
+
+ day <- as.double(rep(0.0,jj))
+ enc <- as.double(rep(0.0,jj - 1))
+ covar <- as.double(rep(0.0,nx))
+ out <- nestsr(jj = jj, nx = nx, nn = nn, zl = zl, zr = zr, x = x, y = y,
+               a = a, b = b, sigma = sigma, day = day, enc = enc, covar = covar,
+               n0 = n0, ntotal = ntotal, ul = ul, ur = ur)
+ plot_covar_trace(x=out, j=1, n0=n0, ntotal=ntotal)
 }
 \author{
 Chong He, Yiqun Yang, Jing Cao, Peng Shao

@@ -11,7 +11,7 @@
     first encounter date to the outcome date.}
     \item{\code{zr}}{The largest possible number of time units from the first
      encounter date to the outcome date.}
-    \item{\code{fate}}{Nest fate; if 1, the nest fate is success;if 0, the
+    \item{\code{Fate}}{Nest fate; if 1, the nest fate is success;if 0, the
     nest fate is failure.}
     \item{\code{Censor}}{The missing fate indicator; if 1, the nest fage is missing;
     if 0, the nest fate is not missing}
