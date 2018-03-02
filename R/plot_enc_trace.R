@@ -41,6 +41,7 @@
 #'  out <- nestsr(jj = jj, nx = nx, nn = nn, zl = zl, zr = zr, x = x, y = y,
 #'                a = a, b = b, sigma = sigma, day = day, enc = enc, covar = covar,
 #'                n0 = n0, ntotal = ntotal, ul = ul, ur = ur)
+#'  plot_enc(x=out, j=1, n0=n0, ntotal=ntotal)
 
 plot_enc_trace <- function(x, j, n0, ntotal, xlab = "iter", ylab = paste("encounter age effect at j=",j), ...){
   iter <- (n0 + 1):ntotal
