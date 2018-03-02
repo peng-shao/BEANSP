@@ -1,5 +1,5 @@
-#' @title Trace plot for enc
-#' @description Displays a plot of sampled values for the age effect of encounter
+#' @title Trace plot for day
+#' @description Displays a plot of sampled values for the age effect of failure
 #' rate vs. iterations.
 #' @param x a \code{nsr} object
 #' @param j The j-th age effect.j=1,2,...,jj-1
@@ -43,8 +43,8 @@
 #'                n0 = n0, ntotal = ntotal, ul = ul, ur = ur)
 #'  plot_enc(x=out, j=1, n0=n0, ntotal=ntotal)
 
-plot_enc_trace <- function(x, j, n0, ntotal, xlab = "iter", ylab = paste("encounter age effect at j=",j), ...){
+plot_day_trace <- function(x, j, n0, ntotal, xlab = "iter", ylab = paste("encounter age effect at j=",j), ...){
   iter <- (n0 + 1):ntotal
-  trace <- x$trace1[iter, j]
+  trace <- x$trace2[iter, j]
   plot(iter, trace, type = "l", xlab = xlab, ylab = ylab)
 }
