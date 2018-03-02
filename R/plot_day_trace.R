@@ -13,7 +13,7 @@
 #' Chong He, Yiqun Yang, Jing Cao, Peng Shao
 #' @keywords methods
 #' @export
-#' @example
+#' @examples
 #'
 #'  n0 <- as.integer(10)
 #'  ntotal <- as.integer(110)
