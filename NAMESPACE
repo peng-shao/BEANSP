@@ -2,5 +2,7 @@
 
 export(nestconv)
 export(nestsr)
+export(plot_enc_trace)
+importFrom(graphics,plot)
 importFrom(stats,var)
 useDynLib(BEANSP, .registration = TRUE)
