@@ -1,6 +1,6 @@
 #' @title Trace plot for enc
-#' @description Displays a plot of iterations vs. sampled values for the age
-#' effect of encounter rate.
+#' @description Displays a plot of sampled values for the age effect of encounter
+#' rate vs. iterations.
 #' @param x a \code{nsr} object
 #' @param j The j-th age effect.j=1,2,...,jj-1
 #' @param n0 The number of burn-in cycles.
