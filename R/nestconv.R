@@ -13,7 +13,7 @@
 #' Ryan, M.R. (2009).  Modeling age and nest-specific survival using a hierarchical
 #' Bayesian approach. Biometrics, 65, 1052-1062.
 #' @export
-#' @example
+#' @examples
 #'
 #' data("example1")
 #' jj <- as.integer(19)
