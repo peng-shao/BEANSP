@@ -1,6 +1,6 @@
 Package: BEANSP
 Title: Bayesian Estimate of Age-specific Nest Survival Probabilities
-Version: 0.0.0.9000
+Version: 0.9.0
 Author: Chong He, Yiqun Yang, Jing Cao
 Maintainer: Peng Shao <psy6b@mail.missouri.edu>
 Description: Computing age specific nest survival rates based on a Bayesian hierarchical model. This package can handle unknown nest age, irregular visiting schedule, unknown fate and nest-specific covariates.
