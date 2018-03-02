@@ -1,6 +1,6 @@
-#' @title Trace Plot for Age Effect for Encounter
-#' @description Displays a plot of sampled values for the age effect of encounter
-#' rate vs. iterations.
+#' @title Trace Plot for Variance Effect
+#' @description Displays a plot of sampled values for the variance effect
+#' vs. iterations.
 #' @param x a \code{nsr} object
 #' @param j The j-th age effect.j=1,2,...,jj-1
 #' @param n0 The number of burn-in cycles.
@@ -41,10 +41,10 @@
 #'  out <- nestsr(jj = jj, nx = nx, nn = nn, zl = zl, zr = zr, x = x, y = y,
 #'                a = a, b = b, sigma = sigma, day = day, enc = enc, covar = covar,
 #'                n0 = n0, ntotal = ntotal, ul = ul, ur = ur)
-#'  plot_enc_trace(x=out, j=1, n0=n0, ntotal=ntotal)
+#'  plot_var_trace(x=out, j=1, n0=n0, ntotal=ntotal)
 
-plot_enc_trace <- function(x, j, n0, ntotal, xlab = "iter", ylab = paste("encounter age effect at j=",j), ...){
+plot_var_trace <- function(x, j, n0, ntotal, xlab = "iter", ylab = paste("encounter age effect at j=",j), ...){
   iter <- (n0 + 1):ntotal
-  trace <- x$trace1[iter, j]
+  trace <- x$trace4[iter, j]
   plot(iter, trace, type = "l", xlab = xlab, ylab = ylab)
 }
