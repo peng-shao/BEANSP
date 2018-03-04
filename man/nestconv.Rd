@@ -23,6 +23,26 @@ The returned values are \code{zl,zr}. If censored=FALSE, \code{ul,ur} are also r
 \description{
 Convert date format data or interval format data to the standard format.
 }
+\examples{
+
+data("example1")
+jj <- as.integer(19)
+nn <- as.integer(217)
+temp1 <- nestconv(0,nn,jj,example1, censored  =  FALSE)
+data("example2")
+jj <- as.integer(20)
+nn <- as.integer(233)
+temp2 <- nestconv(1,nn,jj,example2, censored  =  FALSE)
+data("example3")
+jj <- as.integer(26)
+nn <- as.integer(221)
+temp3 <- nestconv(0,nn,jj,example3, censored  =  TRUE)
+data("example4")
+jj <- as.integer(26)
+nn <- as.integer(221)
+temp4 <- nestconv(1,nn,jj,example4, censored  =  TRUE)
+
+}
 \references{
 Cao, J., He, C., Suedkamp Wells, K.M., Millspaugh, J.J., and
 Ryan, M.R. (2009).  Modeling age and nest-specific survival using a hierarchical

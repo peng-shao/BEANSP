@@ -1,9 +1,9 @@
 #' @title Plot Age-specific Encounter Rate
 #' @description This is age-specific encounter rate plot.
-#' @param x a \code{nsr} object
-#' @param xlab label of \code{x}-axis
-#' @param ylab label of \code{y}-axis
-#' @param ... arguments to be passed to methods.
+#' @param x An object of class "nsr"
+#' @param xlab Label of \code{x}-axis
+#' @param ylab Label of \code{y}-axis
+#' @param ... Arguments to be passed to methods.
 #' @importFrom graphics plot
 #' @author
 #' Chong He, Yiqun Yang, Jing Cao, Peng Shao

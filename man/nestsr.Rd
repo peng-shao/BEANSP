@@ -88,6 +88,11 @@ An object of class "nsr" containing the following components:
 \item{\code{vsr}}{standard deviation of individual age-specific survival rates.}
 \item{\code{vasr}}{standard deviation of average age-specific survival rates.}
 \item{\code{vcasr}}{standard deviation of average cumulative age-specific survival rates.}
+\item{\code{tha}}{numerical values of estimate of \code{theta}.}
+\item{\code{mutha}}{numerical values of expectation of \code{theta}.}
+\item{\code{varthat}}{standard deviation of \code{theta}.}
+\item{\code{trace5}}{numerical trace values for \code{theta}}
+\item{\code{WAIC}}{model selection criterion WAIC value}
 }
 }
 \description{

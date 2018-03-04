@@ -8,13 +8,13 @@ plot_del(x, xlab = "nest age",
   ylab = "individual age-specific nest encounter rate", ...)
 }
 \arguments{
-\item{x}{a \code{nsr} object}
+\item{x}{An object of class "nsr"}
 
-\item{xlab}{label of \code{x}-axis}
+\item{xlab}{Label of \code{x}-axis}
 
-\item{ylab}{label of \code{y}-axis}
+\item{ylab}{Label of \code{y}-axis}
 
-\item{...}{arguments to be passed to methods.}
+\item{...}{Arguments to be passed to methods.}
 }
 \description{
 This is age-specific encounter rate plot.

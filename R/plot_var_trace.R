@@ -1,13 +1,13 @@
 #' @title Trace Plot for Variance Effect
 #' @description Displays a plot of sampled values for the variance effect
 #' vs. iterations.
-#' @param x a \code{nsr} object
-#' @param j the j-th age effect.j=1,2,...,jj-1
-#' @param n0 the number of burn-in cycles.
-#' @param ntotal the number of total Gibbs cycles.
-#' @param xlab label of \code{x}-axis
-#' @param ylab label of \code{y}-axis
-#' @param ... arguments to be passed to methods.
+#' @param x An object of class "nsr"
+#' @param j The j-th age effect.j=1,2,...,jj-1
+#' @param n0 The number of burn-in cycles.
+#' @param ntotal The number of total Gibbs cycles.
+#' @param xlab Label of \code{x}-axis
+#' @param ylab Label of \code{y}-axis
+#' @param ... Arguments to be passed to methods.
 #' @importFrom graphics plot
 #' @author
 #' Chong He, Yiqun Yang, Jing Cao, Peng Shao

@@ -8,19 +8,19 @@ plot_var_trace(x, j, n0, ntotal, xlab = "iter",
   ylab = paste("encounter age effect at j=", j), ...)
 }
 \arguments{
-\item{x}{a \code{nsr} object}
+\item{x}{An object of class "nsr"}
 
-\item{j}{the j-th age effect.j=1,2,...,jj-1}
+\item{j}{The j-th age effect.j=1,2,...,jj-1}
 
-\item{n0}{the number of burn-in cycles.}
+\item{n0}{The number of burn-in cycles.}
 
-\item{ntotal}{the number of total Gibbs cycles.}
+\item{ntotal}{The number of total Gibbs cycles.}
 
-\item{xlab}{label of \code{x}-axis}
+\item{xlab}{Label of \code{x}-axis}
 
-\item{ylab}{label of \code{y}-axis}
+\item{ylab}{Label of \code{y}-axis}
 
-\item{...}{arguments to be passed to methods.}
+\item{...}{Arguments to be passed to methods.}
 }
 \description{
 Displays a plot of sampled values for the variance effect
