@@ -4,7 +4,7 @@ Version: 0.9.0
 Author: Chong He, Yiqun Yang, Jing Cao
 Maintainer: Peng Shao <psy6b@mail.missouri.edu>
 Description: Computing age specific nest survival rates based on a Bayesian hierarchical model. This package can handle unknown nest age, irregular visiting schedule, unknown fate and nest-specific covariates.
-Depends: R (>= 3.4.3)
+Depends: R (>= 3.0.2)
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
